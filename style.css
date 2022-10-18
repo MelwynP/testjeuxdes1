@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+div.container{
+  height: 100vh;
+  background-color: rgb(110, 25, 25);
+  display: flex;
+  padding: 2% 2% 2% 2%;
+  font-family: 'Lato', sans-serif;
+}
+/*REGLE DU JEU*/
+.boutonNotice{
+  position: absolute;
+  top: 35px;
+  left: 70%;
+}
+
+.notice{
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+}
+
+#regleDuJeu{
+  height: 94%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(123, 181, 228);
+  border-radius: 10% 10% 10% 10%;
+}
+
+.pRegleDuJeu{
+  padding: 15px;
+  color: rgb(26, 17, 17);
+  text-align: center;
+  font-size: 1.3em;
+}
+/*ANIMATION VICTOIRE*/
+#victoire{
+  background-color: rgb(167, 218, 218);
+  height: 93%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5% 5% 5% 5%;
+}
+.gif{
+  position: absolute;
+  
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#btnGif{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0%;
+  font-size: 1em;
+}
+.pVictoire{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 2.4em;
+  font-style: italic;
+  padding-top: 15px;
+}
+
+.boutonHold{
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50px, -15px);
+}
+.BHold{
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+}
+
+.boutonRelancerDes{
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-65px, -45px);
+}
+
+.BRdes{
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+}
+
+.boutonNewGame{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-70px, -50px);
+}
+
+.BNewGame{
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+}
+
+#logoDes{
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50px, -50px);
+  box-shadow: 0px 0px 45px grey
+}
+
+p.pPlayers{
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+}
+
+p.pScoreTempo{
+  font-size: 13px;
+  margin: 0px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* PLAYER ONE */
+
+.containerPlayerOne{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(237, 237, 237, 0.991);
+  display: flex;
+  justify-content: center;
+}
+
+.namePlayerOne{
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 110px;
+}
+
+#scoreTotalJ1, #scoreTotalJ2{
+  text-align: center;
+  color: rgb(242, 104, 70);
+  font-size: 3.4em;
+  font-weight: 700;
+}
+#scoreTempoJ1, #scoreTempoJ2{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.scoreTotalPlayerOne{
+  width: 70px;
+  height: 70px;
+  background-color: rgba(76, 0, 255, 0);
+  position: absolute;
+  top: 135px;
+}
+
+.scoreTemporairePlayerOne{
+  height: 70px;
+  width: 85px;
+  background-color: rgb(242, 88, 88);
+  position: absolute;
+  bottom: 95px;
+}
+
+/* PLAYER TWO */
+
+.containerPlayerTwo{
+  width: 50%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.namePlayerTwo{
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 110px;
+}
+
+.scoreTotalPlayerTwo{
+  width: 70px;
+  height: 70px;
+  background-color: rgba(76, 0, 255, 0);
+  position: absolute;
+  top: 135px;
+}
+
+.scoreTemporairePlayerTwo{
+  height: 70px;
+  width: 85px;
+  background-color: rgb(242, 88, 88);
+  position:absolute ;
+  bottom: 95px;
+}
+
+svg{
+  color: red;
+}
+
+@media screen and (max-width: 992px) {
+ /*ANIMATION VICTOIRE*/
+ #victoire{
+  height: 93%;
+  width: 68%;
+  background-color: rgb(147, 108, 202);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  #regleDuJeu{
+    height: 94%;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(123, 181, 228);
+    border-radius: 10% 10% 10% 10%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #scoreTotalJ1, #scoreTotalJ2{
+    text-align: center;
+    color: rgb(242, 104, 70);
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .namePlayerTwo, .namePlayerOne{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 90px;
+  }
+
+  .scoreTotalPlayerTwo, .scoreTotalPlayerOne{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(76, 0, 255, 0);
+    position: absolute;
+    top: 115px;
+  }
+
+  .scoreTemporairePlayerTwo, .scoreTemporairePlayerOne{
+    height: 70px;
+    width: 85px;
+    background-color: rgb(242, 88, 88);
+    position:absolute ;
+    bottom: 145px;
+  }
+
+  p.pPlayers{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .boutonRelancerDes{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50px, -45px);
+  }
+
+  .boutonHold{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-40px, -15px);
+  }
+
+  .boutonNewGame{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-60px, -50px);
+  }
+  .BNewGame{
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    background-color: transparent;
+  }
+
+  #regleDuJeu{
+  height: 94%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(123, 181, 228);
+  border-radius: 10% 10% 10% 10%;
+}
+  
+  .pRegleDuJeu{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  /*ANIMATION VICTOIRE*/
+  #victoire{
+  height: 95%;
+  width: 65%;
+  background-color: rgb(218, 167, 193);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 670px) {
+  /*ANIMATION VICTOIRE*/
+  #victoire{
+   height: 95%;
+   width: 75%;
+   background-color: rgb(35, 164, 40);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+
+  #regleDuJeu{
+    height: 94%;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(123, 181, 228);
+    border-radius: 10% 10% 10% 10%;
+  }
+  .pRegleDuJeu{
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  /*ANIMATION VICTOIRE*/
+  #victoire{
+   height: 95%;
+   width: 90%;
+   background-color: rgb(208, 74, 50);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+  #regleDuJeu{
+    height: 94%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(123, 181, 228);
+    border-radius: 10% 10% 10% 10%;
+  }
+  .pRegleDuJeu{
+    text-align: center;
+    font-size: 0.9em;
+  }
+}
