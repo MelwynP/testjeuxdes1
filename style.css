@@ -28,28 +28,28 @@ div.container{
 }
 
 #regleDuJeu{
-  height: 94%;
-  width: 70%;
+  height: 92%;
+  width: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: rgb(123, 181, 228);
-  border-radius: 10% 10% 10% 10%;
+  background-color: rgb(153, 199, 237);
+  border-radius: 5% 5% 5% 5%;
 }
 
 .pRegleDuJeu{
   padding: 15px;
   color: rgb(26, 17, 17);
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.6em;
 }
 /*ANIMATION VICTOIRE*/
 #victoire{
   background-color: rgb(167, 218, 218);
-  height: 93%;
-  width: 80%;
+  height: 92%;
+  width: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,7 +58,7 @@ div.container{
 }
 .gif{
   position: absolute;
-  
+  border-radius: 5% 5% 5% 5%;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -68,13 +68,13 @@ div.container{
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0%;
-  font-size: 1em;
+  font-size: 0.5em;
 }
 .pVictoire{
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 600;
-  font-size: 2.4em;
+  font-size: 2.0em;
   font-style: italic;
   padding-top: 15px;
 }
@@ -240,15 +240,21 @@ svg{
   }
 
   #regleDuJeu{
-    height: 94%;
-    width: 70%;
+    height: 92%;
+    width: 68%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgb(123, 181, 228);
-    border-radius: 10% 10% 10% 10%;
+    background-color: rgb(153, 199, 237);
+    border-radius: 5% 5% 5% 5%;
+  }
+  .pRegleDuJeu{
+    padding: 15px;
+    color: rgb(26, 17, 17);
+    text-align: center;
+    font-size: 1.4em;
   }
 }
 
@@ -318,15 +324,15 @@ svg{
   }
 
   #regleDuJeu{
-  height: 94%;
-  width: 70%;
+  height: 92%;
+  width: 66%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: rgb(123, 181, 228);
-  border-radius: 10% 10% 10% 10%;
+  background-color: rgb(153, 199, 237);
+  border-radius: 5% 5% 5% 5%;
 }
   
   .pRegleDuJeu{
@@ -338,7 +344,7 @@ svg{
   /*ANIMATION VICTOIRE*/
   #victoire{
   height: 95%;
-  width: 65%;
+  width: 67%;
   background-color: rgb(218, 167, 193);
   position: absolute;
   top: 50%;
@@ -346,41 +352,12 @@ svg{
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 670px) {
-  /*ANIMATION VICTOIRE*/
-  #victoire{
-   height: 95%;
-   width: 75%;
-   background-color: rgb(35, 164, 40);
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-  }
-
-  #regleDuJeu{
-    height: 94%;
-    width: 75%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgb(123, 181, 228);
-    border-radius: 10% 10% 10% 10%;
-  }
-  .pRegleDuJeu{
-    padding: 10px;
-    text-align: center;
-    font-size: 1em;
-  }
-}
 
 @media screen and (max-width: 520px) {
   /*ANIMATION VICTOIRE*/
   #victoire{
    height: 95%;
-   width: 90%;
+   width: 95%;
    background-color: rgb(208, 74, 50);
    position: absolute;
    top: 50%;
@@ -388,18 +365,30 @@ svg{
    transform: translate(-50%, -50%);
   }
   #regleDuJeu{
-    height: 94%;
-    width: 90%;
+    height: 96%;
+    width: 94%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgb(123, 181, 228);
+    background-color: rgba(153, 199, 237, 0.998);
     border-radius: 10% 10% 10% 10%;
   }
   .pRegleDuJeu{
     text-align: center;
     font-size: 0.9em;
+  }
+  .boutonNotice{
+    position: absolute;
+    top: 15px;
+    left: 65%;
+  }
+  .scoreTemporairePlayerTwo, .scoreTemporairePlayerOne{
+    height: 70px;
+    width: 85px;
+    background-color: rgb(242, 88, 88);
+    position:absolute ;
+    bottom: 130px;
   }
 }

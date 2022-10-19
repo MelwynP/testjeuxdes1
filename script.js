@@ -4,6 +4,7 @@ let sommeJ1 = 0;
 let sommeJ2 = 0;
 let scoreTotalJ1 = 0;
 let scoreTotalJ2  = 0;
+let jeuEncour = 0;
 
 function sonNewGame(){
   let sonNewGame = document.createElement("audio");
@@ -34,11 +35,11 @@ function sonVictoire (){
 //Div regle du jeu masqué
 document.getElementById('regleDuJeu').style.visibility='hidden';
 //Ouvrir la regle du jeu
-function regleDuJeu (){
+function ouvrirNotice (){
   document.getElementById('regleDuJeu').style.visibility='visible';
 }
 //Fermer la regle du jeu
-function okey () {
+function fermerNotice () {
   document.getElementById('regleDuJeu').style.visibility='hidden';
 }
 
@@ -56,6 +57,7 @@ function laMainJ2 (){
 }
 
 function nouvellePartie (){
+  jeuEncour = 1;
   sonNewGame();
   laMainJ1();
   sommeJ1 = 0;
@@ -70,6 +72,7 @@ function nouvellePartie (){
 }
 
 function lancerDes(){  
+  if(jeuEncour == 1) {
     sonLancerDes();
     lancer = Math.floor(Math.random() * 6) + 1;
     if (jeux == 1) {
@@ -149,6 +152,7 @@ function lancerDes(){
       }
     }
   }
+}
 
 function hold (){
   if((jeux == 1) && (sommeJ1 != 0)) {
@@ -174,7 +178,7 @@ function hold (){
 }
 
 
-document.getElementById('victoire').style.visibility='visible';
+document.getElementById('victoire').style.visibility='hidden';
 //button ok pour fermer la div du gif
 function bravo () {
   document.getElementById('victoire').style.visibility='hidden'
