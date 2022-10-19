@@ -1,3 +1,4 @@
+//Déclaration des variables.
 let jeux = 0;
 let lancer = 0;
 let sommeJ1 = 0;
@@ -6,106 +7,109 @@ let scoreTotalJ1 = 0;
 let scoreTotalJ2  = 0;
 let jeuEncour = 0;
 
-function sonNewGame(){
-  let sonNewGame = document.createElement("audio");
-  sonNewGame.src = "./son/nouvellePartie.mp3";
-  sonNewGame.play();
-}
-function sonClique() {
-  let sonClique = document.createElement("audio");
-  sonClique.src = "./son/clique.wav";
-  sonClique.play();
+//Son à chaque lancement d'une nouvelle Partie.
+function sonNewGame (){
+  let sonNewGame = document.createElement('audio');
+  sonNewGame.src = './son/nouvellePartie.mp3';
+  sonNewGame.play ();
 }
 
-function sonLancerDes (){
-  let sonDes = document.createElement("audio");
-  sonDes.src = "./son/dés.mp3";
-  sonDes.play();
+//Son clique a chaque passage de laMainJ1.
+function sonLaMain () {
+  let sonClique = document.createElement('audio');
+  sonClique.src = './son/clique.wav';
+  sonClique.play ();
 }
 
-function sonVictoire (){
-  let sonVictoire = document.createElement("audio");
-  sonVictoire.src = "./son/victoire.mp3";
-  sonVictoire.play();
+//Son lancer dé a chaque clique.
+function sonLancerDe () {
+  let sonDe = document.createElement('audio');
+  sonDe.src = './son/dé.mp3';
+  sonDe.play ();
 }
 
+//Son applaudissement si joueur >= 100.
+function sonVictoire () {
+  let sonVictoire = document.createElement('audio');
+  sonVictoire.src = './son/victoire.mp3';
+  sonVictoire.play ();
+}
 
-
-
-//Div regle du jeu masqué
+//règle du jeu masqué.
 document.getElementById('regleDuJeu').style.visibility='hidden';
-//Ouvrir la regle du jeu
-function ouvrirNotice (){
+
+//Ouvrir la règle du jeu.
+function ouvrirNotice () {
   document.getElementById('regleDuJeu').style.visibility='visible';
 }
-//Fermer la regle du jeu
+
+//Ferme la règle du jeu.
 function fermerNotice () {
   document.getElementById('regleDuJeu').style.visibility='hidden';
 }
 
-
-function laMainJ1 (){
+//La main J1.
+function laMainJ1 () {
   jeux = 1;
   document.getElementById('laMainJ2').style.visibility='hidden';
   document.getElementById('laMainJ1').style.visibility='visible';
 }
 
-function laMainJ2 (){
+//La main a J2.
+function laMainJ2 () {
   jeux = 2;
   document.getElementById('laMainJ1').style.visibility='hidden';
   document.getElementById('laMainJ2').style.visibility='visible';
 }
 
-function nouvellePartie (){
+//Donne la main a J1, initialise les scores.
+function nouvellePartie () {
   jeuEncour = 1;
-  sonNewGame();
-  laMainJ1();
-  sommeJ1 = 0;
-  sommeJ2 = 0;
-  scoreTotalJ1 = 0;
-  scoreTotalJ2 = 0;
+  sonNewGame ();
+  laMainJ1 ();
   document.getElementById('scoreTempoJ1').innerHTML =  0;
   document.getElementById('scoreTempoJ2').innerHTML =  0;
   document.getElementById('scoreTotalJ1').innerHTML =  0;
   document.getElementById('scoreTotalJ2').innerHTML =  0;
-  document.getElementById('imageDes').src = "./des/dice-6.png";
+  document.getElementById('imageDe').src = "./dé/dice-6.png";
 }
 
-function lancerDes(){  
+//lance le dé avec la méthode random, donne la main si le dé = 1.
+function lancerDe (){  
   if(jeuEncour == 1) {
-    sonLancerDes();
+    sonLancerDe ();
     lancer = Math.floor(Math.random() * 6) + 1;
-    if (jeux == 1) {
-      switch(lancer){
+    if(jeux == 1) {
+      switch(lancer) {
         case 1 :
           sommeJ1 = 0;
           document.getElementById('scoreTempoJ1').innerHTML = 0;
-          document.getElementById('imageDes').src = './des/dice-1.png'; 
-          laMainJ2();
-          sonClique();
+          document.getElementById('imageDe').src = './dé/dice-1.png'; 
+          laMainJ2 ();
+          sonLaMain ();
           break;
         case 2 :
-          document.getElementById('imageDes').src = './des/dice-2.png';
+          document.getElementById('imageDe').src = './dé/dice-2.png';
           sommeJ1 = sommeJ1 + lancer;
           document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
           break;
         case 3 :
-          document.getElementById('imageDes').src = './des/dice-3.png';
+          document.getElementById('imageDe').src = './dé/dice-3.png';
           sommeJ1 = sommeJ1 + lancer;
           document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
           break;
         case 4 :
-          document.getElementById('imageDes').src = './des/dice-4.png';
+          document.getElementById('imageDe').src = './dé/dice-4.png';
           sommeJ1 = sommeJ1 + lancer;
           document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
           break;
         case 5 :
-          document.getElementById('imageDes').src = './des/dice-5.png';
+          document.getElementById('imageDe').src = './dé/dice-5.png';
           sommeJ1 = sommeJ1 + lancer;
           document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
           break;
         case 6 :
-          document.getElementById('imageDes').src = './des/dice-6.png';
+          document.getElementById('imageDe').src = './dé/dice-6.png';
           sommeJ1 = sommeJ1 + lancer;
           document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
           break;
@@ -118,32 +122,32 @@ function lancerDes(){
         case 1 :
           sommeJ2 = 0;
           document.getElementById('scoreTempoJ2').innerHTML = 0;
-          document.getElementById('imageDes').src = './des/dice-1.png'; 
-          laMainJ1();
-          sonClique();
+          document.getElementById('imageDe').src = './dé/dice-1.png'; 
+          laMainJ1 ();
+          sonLaMain ();
           break;
         case 2 :
-          document.getElementById('imageDes').src = './des/dice-2.png';
+          document.getElementById('imageDe').src = './dé/dice-2.png';
           sommeJ2 = sommeJ2 + lancer;
           document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
           break;
         case 3 :
-          document.getElementById('imageDes').src = './des/dice-3.png';
+          document.getElementById('imageDe').src = './dé/dice-3.png';
           sommeJ2 = sommeJ2 + lancer;
           document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
           break;
         case 4 :
-          document.getElementById('imageDes').src = './des/dice-4.png';
+          document.getElementById('imageDe').src = './dé/dice-4.png';
           sommeJ2 = sommeJ2 + lancer;
           document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
           break;
         case 5 :
-          document.getElementById('imageDes').src = './des/dice-5.png';
+          document.getElementById('imageDe').src = './dé/dice-5.png';
           sommeJ2 = sommeJ2 + lancer;
           document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
           break;
         case 6 :
-          document.getElementById('imageDes').src = './des/dice-6.png';
+          document.getElementById('imageDe').src = './dé/dice-6.png';
           sommeJ2 = sommeJ2 + lancer;
           document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
           break;
@@ -154,46 +158,49 @@ function lancerDes(){
   }
 }
 
-function hold (){
+//Permet d'envoyer les points temporaire sur le score total. la function est bloqué, si le score
+//temporaire est a 0, elle permet aussi de changer de main.
+function hold () {
   if((jeux == 1) && (sommeJ1 != 0)) {
     scoreTotalJ1 = sommeJ1 + scoreTotalJ1;
     document.getElementById('scoreTotalJ1').innerHTML = scoreTotalJ1;
     sommeJ1 = 0;
     document.getElementById('scoreTempoJ1').innerHTML = sommeJ1;
     laMainJ2 ();
-    sonClique();
+    sonLaMain ();
     victoire ();
   }
   else {
-    if (sommeJ2 != 0) {
+    if(sommeJ2 != 0) {
     scoreTotalJ2 = sommeJ2 + scoreTotalJ2;
     document.getElementById('scoreTotalJ2').innerHTML = scoreTotalJ2;
     sommeJ2 = 0;
     document.getElementById('scoreTempoJ2').innerHTML = sommeJ2;
     laMainJ1 ();
-    sonClique();
+    sonLaMain ();
     victoire ();
     }
   }
 }
 
-
-document.getElementById('victoire').style.visibility='hidden';
-//button ok pour fermer la div du gif
-function bravo () {
-  document.getElementById('victoire').style.visibility='hidden'
-  nouvellePartie();
+//Verifie le score total des joueurs et affichage du gif si victoire.
+function victoire () {
+  if(scoreTotalJ1 >= 100) {
+    sonVictoire ();
+    alert (' BRAVO\n\n- Le joueur "1" gagne avec un score total de ' + scoreTotalJ1 + ' points. \n- Le joueur "2" perd avec un score de ' + scoreTotalJ2 + ' points.');
+    document.getElementById('victoire').style.visibility='visible';
+  }
+  else if(scoreTotalJ2 >= 100) {
+    sonVictoire ();
+    alert (' BRAVO\n\n- Le joueur "2" gagne avec un score total de ' + scoreTotalJ2 + ' points. \n- Le joueur "1" perd avec un score de ' + scoreTotalJ1 + ' points.');
+    document.getElementById('victoire').style.visibility='visible';
+  }
 }
 
-function victoire (){
-  if (scoreTotalJ1 >= 10) {
-    sonVictoire();
-    alert ('BRAVO \nLe joueur 1 gagne avec un score total de ' + scoreTotalJ1 + ' points \nLe joueur 2 perd avec un score de ' + scoreTotalJ2 + ' points.');
-    document.getElementById('victoire').style.visibility='visible';
-  }
-  else if (scoreTotalJ2 >= 10) {
-    sonVictoire();
-    alert ('BRAVO \n \nLe joueur 2 gagne avec un score total de ' + scoreTotalJ2 + ' points \nLe joueur 1 perd avec un score de ' + scoreTotalJ1 + ' points.');
-    document.getElementById('victoire').style.visibility='visible';
-  }
+//Gif caché.
+document.getElementById('victoire').style.visibility='hidden';
+//Bouton ok qui ferme le gif.
+function bravo () {
+  document.getElementById('victoire').style.visibility='hidden';
+  nouvellePartie ();
 }

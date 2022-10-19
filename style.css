@@ -1,3 +1,4 @@
+/* Font demandé */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body{
@@ -7,12 +8,19 @@ body{
 
 div.container{
   height: 100vh;
-  background-color: rgb(110, 25, 25);
+  background-color: rgba(181, 29, 29, 0.938);
   display: flex;
+  border-radius: 5px 5px 5px 5px;
   padding: 2% 2% 2% 2%;
   font-family: 'Lato', sans-serif;
 }
-/*REGLE DU JEU*/
+
+em{
+  color: rgb(239, 69, 69);
+  font-weight: 500;
+}
+
+/* Règle du jeu */
 .boutonNotice{
   position: absolute;
   top: 35px;
@@ -28,7 +36,7 @@ div.container{
 }
 
 #regleDuJeu{
-  height: 92%;
+  height: 94%;
   width: 60%;
   position: absolute;
   top: 50%;
@@ -40,15 +48,16 @@ div.container{
 }
 
 .pRegleDuJeu{
-  padding: 15px;
+  padding: 30px;
   color: rgb(26, 17, 17);
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
-/*ANIMATION VICTOIRE*/
+
+/* Aniamtion gif victoire  et bouton*/
 #victoire{
   background-color: rgb(167, 218, 218);
-  height: 92%;
+  height: 94%;
   width: 60%;
   position: absolute;
   top: 50%;
@@ -56,54 +65,58 @@ div.container{
   transform: translate(-50%, -50%);
   border-radius: 5% 5% 5% 5%;
 }
+
 .gif{
   position: absolute;
   border-radius: 5% 5% 5% 5%;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 #btnGif{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  bottom: 0%;
-  font-size: 0.5em;
+  top: 93%;
+  font-size: 0.7em;
 }
+
 .pVictoire{
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 2.0em;
-  font-style: italic;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
+/* Bouton */
 .boutonHold{
   position: absolute;
-  bottom: 80px;
+  bottom: 40px;
   left: 50%;
-  transform: translate(-50px, -15px);
+  transform: translate(-50px, -50px);
 }
+
 .BHold{
   border: none;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 900;
   color: black;
   background-color: transparent;
 }
 
-.boutonRelancerDes{
+.boutonlancerDe{
   position: absolute;
   bottom: 100px;
   left: 50%;
-  transform: translate(-65px, -45px);
+  transform: translate(-70px, -50px);
 }
 
-.BRdes{
+.BRde{
   border: none;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 900;
   color: black;
   background-color: transparent;
 }
@@ -117,35 +130,22 @@ div.container{
 
 .BNewGame{
   border: none;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 900;
   color: black;
   background-color: transparent;
 }
 
-#logoDes{
+/* Image */
+#logoDe{
   position: absolute;
-  top: 47%;
+  top: 46%;
   left: 50%;
   transform: translate(-50px, -50px);
-  box-shadow: 0px 0px 45px grey
+  box-shadow: 0px 0px 50px rgb(37, 33, 33)
 }
 
-p.pPlayers{
-  font-size: 1.8em;
-  font-weight: 600;
-  text-align: center;
-}
-
-p.pScoreTempo{
-  font-size: 13px;
-  margin: 0px;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* PLAYER ONE */
-
+/* Joueurs */
 .containerPlayerOne{
   width: 50%;
   height: 100%;
@@ -153,44 +153,6 @@ p.pScoreTempo{
   display: flex;
   justify-content: center;
 }
-
-.namePlayerOne{
-  width: 150px;
-  height: 50px;
-  position: absolute;
-  top: 110px;
-}
-
-#scoreTotalJ1, #scoreTotalJ2{
-  text-align: center;
-  color: rgb(242, 104, 70);
-  font-size: 3.4em;
-  font-weight: 700;
-}
-#scoreTempoJ1, #scoreTempoJ2{
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 1.8em;
-  font-weight: 600;
-}
-
-.scoreTotalPlayerOne{
-  width: 70px;
-  height: 70px;
-  background-color: rgba(76, 0, 255, 0);
-  position: absolute;
-  top: 135px;
-}
-
-.scoreTemporairePlayerOne{
-  height: 70px;
-  width: 85px;
-  background-color: rgb(242, 88, 88);
-  position: absolute;
-  bottom: 95px;
-}
-
-/* PLAYER TWO */
 
 .containerPlayerTwo{
   width: 50%;
@@ -200,39 +162,67 @@ p.pScoreTempo{
   justify-content: center;
 }
 
-.namePlayerTwo{
+.namePlayerOne, .namePlayerTwo{
   width: 150px;
   height: 50px;
   position: absolute;
   top: 110px;
 }
 
-.scoreTotalPlayerTwo{
+.scoreTotalPlayerOne, .scoreTotalPlayertwo{
   width: 70px;
   height: 70px;
-  background-color: rgba(76, 0, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   position: absolute;
   top: 135px;
 }
+#scoreTotalJ1, #scoreTotalJ2{
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 3.4em;
+  font-weight: 900;
+}
 
-.scoreTemporairePlayerTwo{
-  height: 70px;
-  width: 85px;
-  background-color: rgb(242, 88, 88);
-  position:absolute ;
+.scoreTemporairePlayerOne, .scoreTemporairePlayerTwo{
+  height: 85px;
+  width: 100px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 2px 2px 2px 2px;
+  position: absolute;
   bottom: 95px;
 }
 
+#scoreTempoJ1, #scoreTempoJ2{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2.4em;
+  font-weight: 900;
+}
+
+p.pPlayers{
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+}
+
+p.pScoreTempo{
+  font-size: 17px;
+  margin: 0px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Couleur pour logo Bootstrap */
 svg{
   color: red;
 }
 
+/* Taille d'écran inferieur a 992 */
 @media screen and (max-width: 992px) {
- /*ANIMATION VICTOIRE*/
  #victoire{
-  height: 93%;
+  height: 94%;
   width: 68%;
-  background-color: rgb(147, 108, 202);
+  background-color: rgb(192, 156, 241);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -240,91 +230,117 @@ svg{
   }
 
   #regleDuJeu{
-    height: 92%;
-    width: 68%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgb(153, 199, 237);
-    border-radius: 5% 5% 5% 5%;
+  height: 94%;
+  width: 68%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(153, 199, 237);
+  border-radius: 5% 5% 5% 5%;
   }
+
   .pRegleDuJeu{
-    padding: 15px;
-    color: rgb(26, 17, 17);
-    text-align: center;
-    font-size: 1.4em;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1.3em;
   }
 }
 
+/* Taille d'écran inferieur a 770 */
 @media screen and (max-width: 770px) {
+  .scoreTotalPlayerOne, .scoreTotalPlayerTwo{
+  width: 70px;
+  height: 70px;
+  background-color: rgba(76, 0, 255, 0);
+  position: absolute;
+  top: 125px;
+  }
+
   #scoreTotalJ1, #scoreTotalJ2{
-    text-align: center;
-    color: rgb(242, 104, 70);
-    font-size: 2em;
-    font-weight: 600;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 2.8em;
+  font-weight: 900;
   }
 
-  .namePlayerTwo, .namePlayerOne{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top: 90px;
+  .scoreTemporairePlayerOne, .scoreTemporairePlayerTwo{
+  height: 70px;
+  width: 85px;
+  background-color: rgb(255, 0, 0);
+  position:absolute ;
+  bottom: 165px;
   }
 
-  .scoreTotalPlayerTwo, .scoreTotalPlayerOne{
-    width: 70px;
-    height: 70px;
-    background-color: rgba(76, 0, 255, 0);
-    position: absolute;
-    top: 115px;
+  #scoreTempoJ1, #scoreTempoJ2{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: 900;
   }
 
-  .scoreTemporairePlayerTwo, .scoreTemporairePlayerOne{
-    height: 70px;
-    width: 85px;
-    background-color: rgb(242, 88, 88);
-    position:absolute ;
-    bottom: 145px;
+  .namePlayerOne, .namePlayerTwo{
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
   }
 
   p.pPlayers{
-    font-size: 1.5em;
-    font-weight: 600;
-    text-align: center;
+  font-size: 1.7em;
+  font-weight: 900;
+  text-align: center;
   }
   
-  .boutonRelancerDes{
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50px, -45px);
+  .boutonlancerDe{
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-65px, -45px);
+  }
+
+  .BRde{
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
   }
 
   .boutonHold{
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translate(-40px, -15px);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50px, -50px);
+  }
+
+  .BHold{
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
   }
 
   .boutonNewGame{
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-60px, -50px);
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-60px, -50px);
   }
+  
   .BNewGame{
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
-    background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
   }
 
   #regleDuJeu{
-  height: 92%;
+  height: 94%;
   width: 66%;
   position: absolute;
   top: 50%;
@@ -333,62 +349,79 @@ svg{
   text-align: center;
   background-color: rgb(153, 199, 237);
   border-radius: 5% 5% 5% 5%;
-}
+  }
   
   .pRegleDuJeu{
-    padding: 10px;
-    text-align: center;
-    font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2em;
   }
 
-  /*ANIMATION VICTOIRE*/
   #victoire{
-  height: 95%;
+  height: 94%;
   width: 67%;
   background-color: rgb(218, 167, 193);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  }
 }
 
-
+/* Taille d'écran inferieur a 520 */
 @media screen and (max-width: 520px) {
-  /*ANIMATION VICTOIRE*/
   #victoire{
-   height: 95%;
+   height: 94%;
    width: 95%;
-   background-color: rgb(208, 74, 50);
+   background-color: rgb(208, 99, 80);
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
   }
+
   #regleDuJeu{
-    height: 96%;
-    width: 94%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgba(153, 199, 237, 0.998);
-    border-radius: 10% 10% 10% 10%;
+  height: 96%;
+  width: 94%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(153, 199, 237, 0.998);
+  border-radius: 5% 5% 5% 5%;
   }
+
   .pRegleDuJeu{
-    text-align: center;
-    font-size: 0.9em;
+  text-align: center;
+  font-size: 0.9em;
   }
+  
   .boutonNotice{
     position: absolute;
     top: 15px;
     left: 65%;
   }
+
   .scoreTemporairePlayerTwo, .scoreTemporairePlayerOne{
     height: 70px;
     width: 85px;
-    background-color: rgb(242, 88, 88);
+    background-color: rgb(255, 0, 0);
     position:absolute ;
-    bottom: 130px;
+    bottom: 140px;
+  }
+
+  .boutonHold{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50px, -50px);
+  }
+
+  .boutonlancerDe{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-65px, -45px);
   }
 }
